@@ -42,6 +42,6 @@ find "$input_dir" -type f -name "$target" | while read -r file; do
     echo "procesing file ${file}"
     dir_path=$(dirname "$file")
     filename=$(basename "$file" "$target")
-    bet $file "${dir_path}/${filename}_brain.nii.gz"
+    bet $file "${dir_path}/${filename}_brain.nii.gz" -R
 done
 
